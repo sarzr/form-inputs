@@ -7,6 +7,11 @@ export interface IInput {
   required?: boolean;
 }
 
+export interface IFileInput {
+  placeholder: string;
+  onChange?: (_: string) => unknown;
+}
+
 export interface IInputValues {
   CompanyName: string;
   Bussiness: string;

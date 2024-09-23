@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "./Input";
 import { IInputValues } from "../types/main.d";
+import FileInput from "./FileInput";
 
 function Main() {
   const [values, setValues] = useState<IInputValues>({
@@ -157,7 +158,12 @@ function Main() {
               inputChangeHandler("YourIdea", value);
             }}
           />
-          {/* fileInput */}
+          <FileInput
+            placeholder="Upload Additional file"
+            onChange={(value) => {
+              inputChangeHandler("File", value);
+            }}
+          />
           <button
             className="bg-Green text-white w-full mt-12 py-4 rounded"
             type="submit"
